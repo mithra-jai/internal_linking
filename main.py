@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from controller.web_results import get_google_search_results
 import os
 from dotenv import load_dotenv
+import uvicorn
 
 load_dotenv()
 
@@ -63,6 +64,9 @@ def check_api_key(api_key):
     except Exception as e:
         print(f"An error occurred while checking for API key: {e}")
         return {"status_code":500,"error": "An error occurred while checking for API key"}
+    
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=9000)    
             
         
     
