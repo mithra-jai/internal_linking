@@ -10,7 +10,6 @@ import uvicorn
 
 load_dotenv()
 
-
 app = FastAPI()
 
 # Define the query parameters model
